@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/files/home/style.css" />
+  </head>
+  <body>
+    <%- include ("../../includes/navbar/NavBar.ejs") %>
+    <!--Importa navbar -->
+    <%- include("../../includes/err/ErrorToast.ejs") %>
+    <!--Importa a tela de Erro -->
+    <div class="container">
+      <div class="carrosel">
+        <div
+          class="carrosel-item active"
+          style="
+            background-image: url('https://cdn.discordapp.com/attachments/1115071550295638026/1129153757935063120/Nao_se_preocupe_estamos_sempre_um_passo_a_frente_das_suas_encomendas.png');
+          "
+        ></div>
+
+        <div
+          class="carrosel-item off"
+          style="
+            background-image: url('https://media.discordapp.net/attachments/1115071550295638026/1128862853990994092/DreamShaper_v7_make_a_scene_of_a_delivery_ship_full_of_cargo_1_1.jpg');
+          "
+        ></div>
+
+        <div
+          class="carrosel-item off"
+          style="
+            background-image: url('https://media.discordapp.net/attachments/1115071550295638026/1128864270994645143/DreamShaper_v7_make_a_person_making_a_delivery_with_boxes_in_f_1.jpg?width=1025&height=432');
+          "
+        ></div>
+
+        <div
+          class="carrosel-item off"
+          style="
+            background-image: url('https://cdn.discordapp.com/attachments/1115071550295638026/1129139537633882193/servicos-de-entrega-nao-confie-suas-encomendas-a-qualquer-um.jpg');
+          "
+        ></div>
+
+        <div class="buttons">
+          <div class="left-arrow">◀</div>
+          <div class="right-arrow">▶</div>
+        </div>
+      </div>
+
+      <div class="container_button">
+        <div class="botoes_telas">
+          <a href="/avaliacao"><button>Avaliação</button></a>
+          <a href="/historico"><button>Histórico</button></a>
+          <a href="/encomendas"><button>Encomendas</button></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="/files/home/index.js"></script>
+<script>
+  switchCarrosel();
+</script>

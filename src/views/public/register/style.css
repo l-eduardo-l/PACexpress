@@ -1,0 +1,84 @@
+body {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #252526;
+}
+
+form > input {
+  margin: 0px 0px 10px auto;
+}
+
+form > input {
+  border-radius: 8px;
+  padding: 6px;
+}
+
+form > .end button {
+  font-size: 12px;
+  width: 100px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: #e69043;
+  color: white;
+}
+
+.content {
+  margin: 15% auto;
+  display: flex;
+}
+
+.login {
+  color: white;
+  max-width: 340px;
+  margin: -10% auto 0;
+  padding: 10px 30px 45px 30px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #1e1e1e;
+}
+
+.url {
+  display: flex;
+  font-size: larger;
+  color: rgb(24, 120, 175);
+  flex-direction: row;
+  justify-content: center;
+}
+
+.title {
+  background-color: #2f2fa9;
+  border-radius: 10px;
+  font-size: larger;
+}
+
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.toast {
+  display: flex;
+  background-color: #ff4444;
+  color: #ffffff;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  max-width: 300px;
+}
+
+.toast-icon {
+  margin-right: 10px;
+}
+
+.toast-message p {
+  margin: 0;
+}
+
+.fa-exclamation-circle {
+  color: #ffffff;
+}

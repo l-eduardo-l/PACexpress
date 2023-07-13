@@ -1,0 +1,45 @@
+body {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #252526;
+}
+
+form > input {
+  margin: 0px 0px 10px auto;
+}
+
+form > input {
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.content {
+  margin: 8% auto;
+}
+
+.box {
+  color: white;
+  max-width: 600px;
+  height: 600px;
+  margin: 30px auto 0;
+  padding: 10px 30px 45px 30px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #1e1e1e;
+}
+
+.title {
+  background-color: #e69043;
+  border-radius: 10px;
+  font-size: larger;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 2vh;
+  height: 20%;
+  margin: 2%;
+  border-radius: 12px;
+  background-color: #e69043;
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" type="text/css" href="/login/style.css" />
+    <!--Faz a conexao com o CSS dessa tela -->
+  </head>
+
+  <body>
+    <%-include("../../includes/navbar/NavBar.ejs") %>
+    <!--Importa navbar -->
+    <%- include("../../includes/err/ErrorToast.ejs") %>
+    <!--Importa a tela de Erro -->
+    <div class="content">
+      <div class="login">
+        <div class="title">
+          <h1>Faça seu login</h1>
+        </div>
+
+        <form action="/user/login" method="post">
+          <!--Pede para o usuário que insira um E-mail -->
+          <label for="email">Email</label><br />
+          <input type="email" name="email" id="email" /><br />
+
+          <!--Pede para o usuário que insira uma senha -->
+          <label for="senha">Senha</label><br />
+          <input type="password" name="senha" id="password" /><br />
+
+          <!--Cria os botões para o login -->
+          <div class="end">
+            <button type="submit" class="btn">Enviar</button>
+            <button type="reset" class="btn">Limpar</button>
+          </div>
+
+          <a href="/user/register" class="url">Não tem uma conta?</a>
+          <!--Faz uma conexao com a tela de cadastro -->
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

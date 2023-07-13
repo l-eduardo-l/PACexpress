@@ -1,0 +1,62 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <a class="logo" href="/">
+      <img src="/imgs/logo.png" alt="Login" />
+    </a>
+    <div class="user-info">
+      <% if (logado) { %>
+      <span>Bem-vindo, <strong><%= usuario.nome %></strong></span>
+      <% } %>
+    </div>
+    <div class="navbar-buttons">
+      <% if (logado) { %>
+      <a href="/user/conta" class="navbar-button">Conta</a>
+      <a href="/user/logout" class="navbar-button">Sair</a>
+
+      <% } else {%>
+      <a href="/user/login" class="navbar-button">Login</a>
+      <a href="/user/register" class="navbar-button">Cadastro</a>
+      <% }%>
+    </div>
+  </div>
+</nav>
+
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .navbar {
+    background-color: #adadad;
+    padding: 10px;
+  }
+
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .user-info {
+    margin-right: 10px;
+  }
+
+  .navbar-buttons .navbar-button {
+    border-radius: 4px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #ddd;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .navbar-buttons .navbar-button:hover {
+    background-color: #bbb;
+  }
+</style>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="/register/style.css" />
+  </head>
+
+  <%- include ("../../includes/err/ErrorToast.ejs") %> <%-
+  include("../../includes/navbar/NavBar.ejs") %>
+  <body>
+    <div class="content">
+      <div class="login">
+        <div class="title">
+          <h1>Faça seu cadastro</h1>
+        </div>
+
+        <form action="/user/register" method="post">
+          <!--Pede para o usuário que insira as informações (Email, Senha, Nome, CEP) -->
+          <label for="Nome">Nome</label><br />
+          <input type="text" name="nome" id="name" /><br />
+
+          <label for="Email">Email</label><br />
+          <input type="email" name="email" id="email" /><br />
+
+          <label for="Senha">Senha</label><br />
+          <input type="password" name="senha" id="password" /><br />
+
+          <label for="cep">CEP</label><br />
+          <input type="text" name="cep" id="cep" /><br />
+
+          <label for="cpf">CPF</label><br />
+          <input type="text" name="cpf" id="cpf" /><br />
+
+          <div class="end">
+            <button type="submit" class="btn">Enviar</button>
+            <button type="reset" class="btn">Limpar</button>
+          </div>
+
+          <!--Faz uma conexao com a tela de login -->
+          <a href="/user/login" class="url">Login</a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

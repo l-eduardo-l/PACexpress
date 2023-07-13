@@ -1,0 +1,40 @@
+<% if (message.message ) { %>
+<link rel="stylesheet" type="text/css" href="/err/style.css" />
+<div class="toast-container">
+  <% message.message.forEach(element => { %>
+  <div class="toast toast-error">
+    <div class="toast-icon">
+      <i class="fas fa-exclamation-circle"></i>
+    </div>
+    <div class="toast-message">
+      <p><%= element %></p>
+    </div>
+  </div>
+  <% }) %>
+</div>
+
+<script>
+  setTimeout(() => {
+    const elementos = document.querySelectorAll('.toast-error');
+    const opacidadeInicial = 1;
+    const passo = opacidadeInicial / ((1 * 1000) / 100);
+
+    const diminuirOpacidade = (elemento) => {
+      let opacidade = opacidadeInicial;
+      const intervalo = setInterval(() => {
+        opacidade -= passo;
+        elemento.style.opacity = opacidade;
+
+        if (opacidade <= 0) {
+          clearInterval(intervalo);
+          elemento.style.display = 'none';
+        }
+      }, 1000);
+    };
+
+    elementos.forEach((elemento) => {
+      diminuirOpacidade(elemento);
+    });
+  }, 1000);
+</script>
+<% } %>

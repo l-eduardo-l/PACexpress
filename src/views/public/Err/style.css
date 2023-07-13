@@ -1,0 +1,33 @@
+.toast-container {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.toast {
+  display: flex;
+  background-color: #f7c200;
+  color: #000000;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  max-width: 300px;
+}
+
+.toast-icon {
+  margin-right: 10px;
+}
+
+.toast-message p {
+  margin: 0;
+}
+
+.fa-exclamation-circle {
+  color: #ffffff;
+}
